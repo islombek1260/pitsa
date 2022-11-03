@@ -1,0 +1,207 @@
+/* FONTS */
+/* roboto-regular - latin */
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/roboto-v30-latin-regular.eot'); /* IE9 Compat Modes */
+    src: local(''),
+         url('../fonts/roboto-v30-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/roboto-v30-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../fonts/roboto-v30-latin-regular.woff') format('woff'), /* Modern Browsers */
+         url('../fonts/roboto-v30-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/roboto-v30-latin-regular.svg#Roboto') format('svg'); /* Legacy iOS */
+  }
+  /* roboto-500 - latin */
+  @font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    src: url('../fonts/roboto-v30-latin-500.eot'); /* IE9 Compat Modes */
+    src: local(''),
+         url('../fonts/roboto-v30-latin-500.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/roboto-v30-latin-500.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../fonts/roboto-v30-latin-500.woff') format('woff'), /* Modern Browsers */
+         url('../fonts/roboto-v30-latin-500.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/roboto-v30-latin-500.svg#Roboto') format('svg'); /* Legacy iOS */
+  }
+  /* roboto-700 - latin */
+  @font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/roboto-v30-latin-700.eot'); /* IE9 Compat Modes */
+    src: local(''),
+         url('../fonts/roboto-v30-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/roboto-v30-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../fonts/roboto-v30-latin-700.woff') format('woff'), /* Modern Browsers */
+         url('../fonts/roboto-v30-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/roboto-v30-latin-700.svg#Roboto') format('svg'); /* Legacy iOS */
+  }
+
+/* GENERAL */
+
+*{
+    box-sizing: border-box;
+  }
+  *::before,
+  *::after{
+    box-sizing: inherit;
+  }
+  html{
+    height: 100%;
+    box-sizing: border-box;
+  }
+  img{
+    display: block;
+    height: auto;
+  }
+  body{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    color: #000000;
+    background-color: #F5F5F5F5;
+  }
+.container{
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.visible{
+    visibility: hidden;
+    font-size: 0;
+    display: none;
+}
+
+/* HEADER */
+header{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(58, 197, 72);
+}
+.site-nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+.site-logo{
+    text-decoration: none;
+    width: 150px;
+    height: 150px;
+}
+.site-logo__img{
+    width: 150px;
+    height: 150px;
+}
+.site-nav__list{
+    width: 800px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+.site-nav__item{
+    width: 200px;
+
+}
+.site-nav__link{
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+/* MAIN */
+
+/* HERO-SECTION */
+
+.hero{
+    padding: 40px 0;
+    background-color: #d6d3d364;
+}
+.hero__theme{
+    text-align: center;
+    color: #000000;
+    margin: 0;
+    padding: 40px 0;
+}
+.hero__box{
+    display: flex;
+    justify-content: space-between;
+
+}
+.hero__form{
+    flex-direction: column;
+    width: 65%;
+    border-right: 2px solid #000000;
+}
+.form-select{
+    width: 400px;
+    height: 60px;
+    font-size: 30px;
+    border-radius: 15px;
+    padding: 0 25px;
+}
+.check-input{
+    width: 25px;
+    height: 25px;
+}
+.wrapper{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.ustiga{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.ustiga__label{
+    display: flex;
+    align-items: center;
+    width: 50%;
+}
+.qoshimchalar{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 24px;
+}
+.submitBtn{
+    text-align: right;
+    font-size: 25px;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 15px;
+    padding: 10px 60px;
+    background-color: rgb(58, 197, 72);
+}
+footer{
+    height: 100px;
+    padding-top: 50px;
+    background-color: rgb(58, 197, 72);
+}
+.footer-span{
+    font-size: large;
+    font-weight: 400;
+}
+.yupqa, .qalin, .hot-dog, .sm25, .sm30, .sm35, 
+.pomidor, .kurka-gushti, .zaytun,
+.tuzlangan-bodring, .qoziqorin, .qazi{
+    display: none;
+}
+.active{
+    display: block;
+}

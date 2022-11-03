@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <title>Pitsa</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav class="site-nav">
+                <h1 class="visible">Pitsa</h1>
+                <a class="site-logo" href="#"><img class="site-logo__img" src="./images/image_2022-11-02_13-03-08.png" alt="site-logo__img"></a>
+                <ul class="site-nav__list">
+                    <li class="site-nav__item"><a class="site-nav__link" href="#">Home</a></li>
+                    <li class="site-nav__item"><a class="site-nav__link" href="#">About us</a></li>
+                    <li class="site-nav__item"><a class="site-nav__link" href="#">Contact</a></li>
+                    <li class="site-nav__item"><a class="site-nav__link" href="#">Delivery</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h2 class="hero__theme">Pitsa</h2>
+                <div class="hero__box">
+                    <div class="hero__form">
+                        <p>Hamir-turi</p>
+                        <select class="form-select" id="hamirTuri">
+                            <option class="selects" value="yupqa" selected>yupqa</option>
+                            <option class="selects" value="qalin">qalin</option>
+                            <option class="selects" value="hot-dog bort">hot-dog bort</option>
+                        </select>
+                        <p>Pitsa kottaligi</p> 
+                        <form id="kottaliglari">
+                            <input class="check-input" type="radio" name="kottaligi" id="25" value="25sm">25sm
+                            <input class="check-input" type="radio" name="kottaligi" id="30" value="30sm" checked>30sm
+                            <input class="check-input" type="radio" name="kottaligi" id="35" value="35sm">35sm
+                        </form>
+                        <p>Ustiga nma solaylik</p>
+                        <form class="ustiga">
+                            <label class="ustiga__label">
+                            <input class="check-input ustiga__input" type="checkbox" value="Pomidor" id="pomidor">
+                            Pomidor
+                            </label>
+                            <label class="ustiga__label">
+                            <input class="check-input ustiga__input" type="checkbox" value="Kurka goshti" id="kurka-gusti">
+                            Kurka gushti
+                            </label>
+                            <label class="ustiga__label">
+                            <input class="check-input ustiga__input" type="checkbox" value="zaytun" id="zaytun">
+                            Zaytun
+                            </label>
+                            <label class="ustiga__label">
+                            <input class="check-input ustiga__input" type="checkbox" value="Tuzlangan bodring" id="tuzlangan-bodring">
+                            Tuzlangan bodring
+                            </label>
+                            <label class="ustiga__label">
+                            <input class="check-input ustiga__input" type="checkbox" value="Qoziqorin" id="qoziqorin">
+                            Qoziqorin
+                            </label>
+                            <label class="ustiga__label">
+                            <input class="check-input ustiga__input" type="checkbox" value="Qazi" id="qazi">
+                            Qazi
+                            </label>
+                        </form>
+                        <!-- <p>Qo'shimchalar</p>
+                        <form class="qoshimchalar">
+                            <label class="ustiga__label">
+                                <input class="check-input qoshimcha__input" type="checkbox" value="achchiq" id="achchiq">
+                                achchiq
+                            </label>
+                            <label class="ustiga__label">
+                                <input class="check-input qoshimcha__input" type="checkbox" value="sosiskali" id="sosiskali">
+                                sosiskali
+                            </label>
+                        </form> -->
+                    </div>
+                    <div class="wrapper">
+                        <div class="hamir">
+                            <p class="pi">Hamir:</p>
+                            <p class="yupqa">-yupqa</p>
+                            <p class="qalin">-qalin</p>
+                            <p class="hot-dog">-hot-dog bort</p>
+                        </div>
+                        <div class="kottaligi">
+                            <p class="pi">Kottaligi:</p>
+                            <p class="sm25">-25sm</p>
+                            <p class="sm30">-30sm</p>
+                            <p class="sm35">-35sm</p>
+                        </div>
+                        <div class="ustida">
+                            <p class="pi">Ustida:</p>
+                            <p class="pomidor">-Pomidor</p>
+                            <p class="kurka-gushti">-Kurka gushti</p>
+                            <p class="zaytun">-Zaytun</p>
+                            <p class="tuzlangan-bodring">Tuzlangan bodring</p>
+                            <p class="qoziqorin">-Qoziqorin</p>
+                            <p class="qazi">Qazi</p>
+                        </div>
+                        <div class="qoshimcha">
+                            <p class="pi">Qo'shimcha:</p>
+                        </div>
+                    </div>
+                </div>
+                <input class="submitBtn"  type="submit" onclick="getValue()">
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p class="footer-span">© 2022 Rahimberdiyev Islom</p>
+        </div>
+    </footer>
+
+    <script src="./js/utilits.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>
