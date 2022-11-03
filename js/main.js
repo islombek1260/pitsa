@@ -75,23 +75,23 @@ function e2(){
 function zakaz(){
     switch(undefined){
         case pitsa.hamirTuri:
-            $('.modal-body').innerHTML=`<span class="pi">Ma'lumot yetarli emas!!!</span>
+            $('.modal-body').innerHTML=`<span class="buyurtma">Ma'lumot yetarli emas!!!</span>
             <img class="modal-img" src="../images/images.png" alt="warning">`;
             break;
         case pitsa.kottaligi:
-            $('.modal-body').innerHTML=`<span class="pi">Ma'lumot yetarli emas!!!</span>
+            $('.modal-body').innerHTML=`<span class="buyurtma">Ma'lumot yetarli emas!!!</span>
             <img class="modal-img" src="../images/images.png" alt="warning">`;
             break
         case pitsa.ustiga:
-            $('.modal-body').innerHTML=`<span class="pi">Ma'lumot yetarli emas!!!</span>
+            $('.modal-body').innerHTML=`<span class="buyurtma">Ma'lumot yetarli emas!!!</span>
             <img class="modal-img" src="../images/images.png" alt="warning">`;
             break;
         case pitsa.qoshimchalar:
-            $('.modal-body').innerHTML=`<span class="pi">Ma'lumot yetarli emas!!!</span>
+            $('.modal-body').innerHTML=`<span class="buyurtma">Ma'lumot yetarli emas!!!</span>
             <img class="modal-img" src="../images/images.png" alt="warning">`;
             break;
         default:
-            $('.modal-body').innerHTML=`<span class="pi">Buyurtmangiz qabul qilindi</span>
+            $('.modal-body').innerHTML=`<span class="buyurtma">Buyurtmangiz qabul qilindi.</span>
             <img class="modal-img" src="../images/checked.png" alt="sucses">`;
     }
 

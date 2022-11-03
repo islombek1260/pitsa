@@ -366,6 +366,11 @@ footer{
     width: 50%;
     height: 60%;
 }
+.buyurtma{
+    color: #000000;
+    font-weight: 700;
+    font-size: 30px;
+}
 
 @keyframes modalopen{
     from{ opacity: 0}
