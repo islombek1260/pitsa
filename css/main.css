@@ -59,16 +59,17 @@
   body{
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     height: 100%;
     margin: 0;
     padding: 0;
     font-family: 'Roboto';
     font-style: normal;
-    font-weight: 700;
+    font-weight: 500;
     font-size: 24px;
     line-height: 28px;
-    color: #000000;
-    background-color: #F5F5F5F5;
+    color: #f4f4f4f4;
+    background-image: url(/images/background-img-pitsa2.jpg);
   }
 .container{
     max-width: 1400px;
@@ -82,7 +83,7 @@
     display: none;
 }
 
-/* HEADER */
+/*===================================== HEADER ==================================*/
 header{
     position: relative;
     display: flex;
@@ -106,56 +107,133 @@ header{
     height: 150px;
 }
 .site-nav__list{
-    width: 800px;
+    max-width: 800px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     list-style: none;
 }
 .site-nav__item{
-    width: 200px;
-
+    width: 150px;
 }
 .site-nav__link{
     color: #ffffff;
     text-decoration: none;
     text-transform: uppercase;
 }
+.menu-btn{
+    display: none;
+    width: 40px;
+    height: 32px;
+    background: transparent;
+    border: none;
+    background-image: url(../images/menu-btn.svg);
+    background-size: contain;
+}
 
-/* MAIN */
 
-/* HERO-SECTION */
+@media only screen and (max-width:870px) {
+    body{
+        font-size: 20px;
+    }
+    .container{
+        padding: 0 40px;
+    }
+    .menu-btn{
+        display: block;
+        z-index: 3;
+    }
+    .site-logo{
+        width: 100px;
+        height: 100px;
+    }
+    .site-logo__img {
+        width: 100px;
+        height: 100px;
+    }
+    .site-nav__list{
+        flex-direction: column;
+        position: absolute;
+        top: -25px;
+        right: 0%;
+        background-color: rgba(0, 0, 0, 0.753);
+        padding: 50px 100px 30px 30px;
+        z-index: 2;
+        transition: all 0.5s linear;
+    } 
+    .site-nav__item{
+        margin-bottom: 20px;
+    }
+    
+}
+
+/*===================================== MAIN ====================================*/
+
+/*================================= HERO-SECTION ================================*/
 
 .hero{
     padding: 40px 0;
-    background-color: #d6d3d364;
 }
 .hero__theme{
     text-align: center;
-    color: #000000;
     margin: 0;
-    padding: 40px 0;
+    padding: 20px 0;
 }
 .hero__box{
     display: flex;
     justify-content: space-between;
-
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
 }
 .hero__form{
     flex-direction: column;
     width: 65%;
-    border-right: 2px solid #000000;
+    border-right: 2px solid #ffffff;
+}
+.pi{
+    font-size: 30px;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 20px;
 }
 .form-select{
-    width: 400px;
     height: 60px;
     font-size: 30px;
     border-radius: 15px;
     padding: 0 25px;
 }
+.check_input{
+    width: 40px;
+    height: 40px;
+}
+#kottaliglari{
+    display: flex;
+}
+.check_input_label{
+    border: 5px solid rgb(36, 180, 0);
+    border-radius: 50%;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 100px;
+    margin-right: 5px;
+    font-weight: bold;
+}
+.check_input_label:focus{
+    background-color: #000000;
+}
 .check-input{
+    cursor: pointer;
     width: 25px;
     height: 25px;
+    background-color: #6A983C !important;
+    border-color: #46760A !important;
+}
+.check-input:checked{
+    background-color: #6A983C !important;
+    border-color: #46760A !important;
 }
 .wrapper{
     width: 30%;
@@ -188,6 +266,50 @@ header{
     padding: 10px 60px;
     background-color: rgb(58, 197, 72);
 }
+
+@media only screen and (max-width:870px) {
+    .hero{
+        padding: 0 0 20px;
+    }
+    .hero__theme{
+        padding: 20px 0 10px;
+    }
+    .hero__box{
+        flex-direction: column;
+        align-items: center;
+    }
+    .hero__form{
+        border-right: none;
+        border-bottom: 2px solid #ffffff;
+        width: 90%;
+    }
+    .wrapper{
+        width: 90%;
+    }
+    .pi{
+        font-size: 20px;
+        display: inline-block;
+        margin-bottom: 20px;
+    }
+    .form-select{
+        font-size: 20px;
+    }
+    .check-input{
+        width: 15px;
+        height: 15px;
+    }
+    .hamir, .kottaligi, .ustida, .qoshimcha{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+}
+.submitBtn{
+    text-align: center;
+}
+
+/* ==================================Footer =========================================== */
+
 footer{
     height: 100px;
     padding-top: 50px;
@@ -197,11 +319,53 @@ footer{
     font-size: large;
     font-weight: 400;
 }
-.yupqa, .qalin, .hot-dog, .sm25, .sm30, .sm35, 
-.pomidor, .kurka-gushti, .zaytun,
-.tuzlangan-bodring, .qoziqorin, .qazi{
+
+.active{
+    transform: translateX(150%);
     display: none;
 }
-.active{
-    display: block;
+.modal{
+    display: none;
+    position: fixed;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.modal-content{
+    position: relative;
+    padding: 30px;
+    background-color: #f4f4f4f4;
+    margin: 20% auto;
+    padding: 50px;
+    width: 30%;
+    height: 50%;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
+    animation-name:modalopen;
+    animation-duration:3s;
+}
+.closeBtn{
+    color: #ccc;
+    float: right;
+    font-size: 50px;
+}
+.closeBtn:hover, .closeBtn:focus{
+    color: #000000;
+    text-decoration: none;
+    cursor: pointer;
+}
+.modal-img{
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    width: 50%;
+    height: 60%;
+}
+
+@keyframes modalopen{
+    from{ opacity: 0}
+    to {opacity: 1}
 }

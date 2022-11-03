@@ -19,6 +19,7 @@
                     <li class="site-nav__item"><a class="site-nav__link" href="#">Contact</a></li>
                     <li class="site-nav__item"><a class="site-nav__link" href="#">Delivery</a></li>
                 </ul>
+                <button class="menu-btn"></button>
             </nav>
         </div>
     </header>
@@ -29,85 +30,77 @@
                 <h2 class="hero__theme">Pitsa</h2>
                 <div class="hero__box">
                     <div class="hero__form">
-                        <p>Hamir-turi</p>
+                        <p class="pi" style="display: block">Hamir-turi</p>
                         <select class="form-select" id="hamirTuri">
-                            <option class="selects" value="yupqa" selected>yupqa</option>
-                            <option class="selects" value="qalin">qalin</option>
-                            <option class="selects" value="hot-dog bort">hot-dog bort</option>
+                            <option class="selects" value="-yupqa">yupqa</option>
+                            <option class="selects" value="-qalin">qalin</option>
+                            <option class="selects" value="-hot-dog bort">hot-dog bort</option>
                         </select>
-                        <p>Pitsa kottaligi</p> 
-                        <form id="kottaliglari">
-                            <input class="check-input" type="radio" name="kottaligi" id="25" value="25sm">25sm
-                            <input class="check-input" type="radio" name="kottaligi" id="30" value="30sm" checked>30sm
-                            <input class="check-input" type="radio" name="kottaligi" id="35" value="35sm">35sm
-                        </form>
-                        <p>Ustiga nma solaylik</p>
+                        <p class="pi" style="display: block">Pitsa kottaligi</p> 
+                        <div id="kottaliglari">
+                            <label class="check_input_label" for="25"><input class="check_input" type="radio" name="kottaligi" id="25" value="-25sm">25sm</label>
+                            <label class="check_input_label" for="30"><input class="check_input" type="radio" name="kottaligi" id="30" value="-30sm">30sm</label>
+                            <label class="check_input_label" for="35"><input class="check_input" type="radio" name="kottaligi" id="35" value="-35sm">35sm</label>    
+                        </div>
+                        <p class="pi">Ustiga nma solaylik</p>
                         <form class="ustiga">
                             <label class="ustiga__label">
-                            <input class="check-input ustiga__input" type="checkbox" value="Pomidor" id="pomidor">
+                            <input class="check-input ustiga__input" type="checkbox" value="Pomidor" id="pomidor" onchange="e1()">
                             Pomidor
                             </label>
                             <label class="ustiga__label">
-                            <input class="check-input ustiga__input" type="checkbox" value="Kurka goshti" id="kurka-gusti">
+                            <input class="check-input ustiga__input" type="checkbox" value="Kurka goshti" id="kurka-gusti" onchange="e1()">
                             Kurka gushti
                             </label>
                             <label class="ustiga__label">
-                            <input class="check-input ustiga__input" type="checkbox" value="zaytun" id="zaytun">
+                            <input class="check-input ustiga__input" type="checkbox" value="zaytun" id="zaytun" onchange="e1()">
                             Zaytun
                             </label>
                             <label class="ustiga__label">
-                            <input class="check-input ustiga__input" type="checkbox" value="Tuzlangan bodring" id="tuzlangan-bodring">
+                            <input class="check-input ustiga__input" type="checkbox" value="Tuzlangan bodring" id="tuzlangan-bodring" onchange="e1()">
                             Tuzlangan bodring
                             </label>
                             <label class="ustiga__label">
-                            <input class="check-input ustiga__input" type="checkbox" value="Qoziqorin" id="qoziqorin">
+                            <input class="check-input ustiga__input" type="checkbox" value="Qoziqorin" id="qoziqorin" onchange="e1()">
                             Qoziqorin
                             </label>
                             <label class="ustiga__label">
-                            <input class="check-input ustiga__input" type="checkbox" value="Qazi" id="qazi">
+                            <input class="check-input ustiga__input" type="checkbox" value="Qazi" id="qazi" onchange="e1()">
                             Qazi
                             </label>
                         </form>
-                        <!-- <p>Qo'shimchalar</p>
+                        <p class="pi">Qo'shimchalar</p>
                         <form class="qoshimchalar">
                             <label class="ustiga__label">
-                                <input class="check-input qoshimcha__input" type="checkbox" value="achchiq" id="achchiq">
+                                <input class="check-input qoshimcha__input" type="checkbox" value="achchiq" id="achchiq" onchange="e2()">
                                 achchiq
                             </label>
                             <label class="ustiga__label">
-                                <input class="check-input qoshimcha__input" type="checkbox" value="sosiskali" id="sosiskali">
+                                <input class="check-input qoshimcha__input" type="checkbox" value="sosiskali" id="sosiskali" onchange="e2()">
                                 sosiskali
                             </label>
-                        </form> -->
+                        </form>
                     </div>
                     <div class="wrapper">
                         <div class="hamir">
-                            <p class="pi">Hamir:</p>
-                            <p class="yupqa">-yupqa</p>
-                            <p class="qalin">-qalin</p>
-                            <p class="hot-dog">-hot-dog bort</p>
+                            <span class="pi">Hamir:</span>
+                            <span class="yupqa">-yupqa</span>
                         </div>
                         <div class="kottaligi">
-                            <p class="pi">Kottaligi:</p>
-                            <p class="sm25">-25sm</p>
-                            <p class="sm30">-30sm</p>
-                            <p class="sm35">-35sm</p>
+                            <span class="pi">Kottaligi:</span>
+                            <span class="sm25"></span>
                         </div>
                         <div class="ustida">
-                            <p class="pi">Ustida:</p>
-                            <p class="pomidor">-Pomidor</p>
-                            <p class="kurka-gushti">-Kurka gushti</p>
-                            <p class="zaytun">-Zaytun</p>
-                            <p class="tuzlangan-bodring">Tuzlangan bodring</p>
-                            <p class="qoziqorin">-Qoziqorin</p>
-                            <p class="qazi">Qazi</p>
+                            <span class="pi">Ustida:</span>
+                            <span class="pomidor"></span>
                         </div>
                         <div class="qoshimcha">
-                            <p class="pi">Qo'shimcha:</p>
+                            <span class="pi">Qo'shimcha:</span>
+                            <span class="achchiq"></span>
                         </div>
+                        <button class="submitBtn" id="modalBtn"  type="submit" onclick="zakaz()">Buyurtma berish</button>
                     </div>
                 </div>
-                <input class="submitBtn"  type="submit" onclick="getValue()">
             </div>
         </section>
     </main>
@@ -117,6 +110,13 @@
             <p class="footer-span">© 2022 Rahimberdiyev Islom</p>
         </div>
     </footer>
+
+    <div class="modal" id="simpleModal">
+        <div class="modal-content">
+            <span class="closeBtn" id="closeBtn">&times;</span>
+                <div class="modal-body"><span class="pi">Buyurtmangiz qabul qilindi</span></div>
+        </div>
+    </div>
 
     <script src="./js/utilits.js"></script>
     <script src="./js/main.js"></script>
