@@ -70,6 +70,7 @@
     line-height: 28px;
     color: #f4f4f4f4;
     background-image: url(/images/background-img-pitsa2.jpg);
+    background-size: contain;
   }
 .container{
     max-width: 1400px;
@@ -152,10 +153,11 @@ header{
         height: 100px;
     }
     .site-nav__list{
+        display: none;
         flex-direction: column;
         position: absolute;
         top: -25px;
-        right: 0%;
+        right: 0;
         background-color: rgba(0, 0, 0, 0.753);
         padding: 50px 100px 30px 30px;
         z-index: 2;
@@ -165,6 +167,10 @@ header{
         margin-bottom: 20px;
     }
     
+}
+.active{
+    transform: translateX(0%);
+    display: flex;
 }
 
 /*===================================== MAIN ====================================*/
@@ -197,6 +203,7 @@ header{
     font-weight: 700;
     display: block;
     margin-bottom: 20px;
+    color: rgb(58, 197, 72);
 }
 .form-select{
     height: 60px;
@@ -210,6 +217,7 @@ header{
 }
 #kottaliglari{
     display: flex;
+    justify-content: space-between;
 }
 .check_input_label{
     border: 5px solid rgb(36, 180, 0);
@@ -306,6 +314,26 @@ header{
         flex-wrap: wrap;
     }
 }
+@media only screen and (max-width:570px){
+    .hero__box{
+        padding: 15px;
+        padding-top: 0;
+    }
+    .hero__form{
+        width: 100%;
+    }
+    .wrapper{
+        width: 100%;
+    }
+    .check_input_label{
+        border: 3px solid rgb(36, 180, 0);
+        height: 70px;
+        width: 70px;
+        margin-right: 5px;
+        font-weight: 500;
+        font-size: 15px;
+    }
+}
 .submitBtn{
     text-align: center;
 }
@@ -322,10 +350,7 @@ footer{
     font-weight: 400;
 }
 
-.active{
-    transform: translateX(150%);
-    display: none;
-}
+
 .modal{
     display: none;
     position: fixed;
@@ -339,7 +364,6 @@ footer{
 }
 .modal-content{
     position: relative;
-    padding: 30px;
     background-color: #f4f4f4f4;
     margin: 20% auto;
     padding: 50px;
@@ -350,7 +374,7 @@ footer{
     animation-duration:3s;
 }
 .closeBtn{
-    color: #ccc;
+    color: rgb(160, 155, 155);
     float: right;
     font-size: 50px;
 }
@@ -370,6 +394,43 @@ footer{
     color: #000000;
     font-weight: 700;
     font-size: 30px;
+}
+@media only screen and (max-width:870px) {
+    .buyurtma{
+        color: #000000;
+        font-weight: 400;
+        font-size: 20px;
+    } 
+    .modal-content{
+        padding: 30px;
+        width: 50%;
+        height: 50%;
+        box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
+        animation-name:modalopen;
+        animation-duration:3s;
+    }
+}
+@media only screen and (max-width:570px) {
+    .buyurtma{
+        color: #000000;
+        font-weight: 400;
+        font-size: 20px;
+    } 
+    .modal-content{
+        padding: 20px;
+        width: 50%;
+        height: 50%;
+        box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
+        animation-name:modalopen;
+        animation-duration:3s;
+    }
+    .modal-img{
+        position: absolute;
+        top: 40%;
+        left: 25%;
+        width: 50%;
+        height: 40%;
+    }   
 }
 
 @keyframes modalopen{
