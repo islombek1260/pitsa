@@ -121,12 +121,20 @@ function openModal(){
 
 // Function to close modal
 function closeModal(){
+    pitsa.hamirTuri = undefined;
+    pitsa.kottaligi = undefined;
+    pitsa.ustiga = undefined; 
+    pitsa.qoshimchalar = undefined;
     modal.style.display = 'none';
 }
 
 // Function to close modal if outside click
 function outsideClick(e){
     if(e.target == modal){
+        pitsa.hamirTuri = undefined;
+        pitsa.kottaligi = undefined;
+        pitsa.ustiga = undefined; 
+        pitsa.qoshimchalar = undefined;
     modal.style.display = 'none';
     }
 }
